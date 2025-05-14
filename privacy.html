@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKI AI - Privacy Policy</title>
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-left: 5px;
+        }
+        
+        .back-to-site {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .back-to-site:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .privacy-section {
+            padding: 8rem 0 4rem;
+        }
+        
+        .privacy-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            padding: 3rem;
+        }
+        
+        .privacy-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .privacy-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .privacy-header h1::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        
+        .last-updated {
+            display: block;
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+        
+        .privacy-content section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .privacy-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 1.2rem;
+            color: #495057;
+            font-size: 1rem;
+        }
+        
+        .privacy-content ul, .privacy-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 0.8rem;
+            color: #495057;
+        }
+        
+        .privacy-content strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .privacy-content a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .privacy-content a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        
+        .highlighted-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .highlighted-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            border-bottom: none;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-section a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .contact-section a:hover {
+            color: var(--secondary);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin-bottom: 1.5rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 1.5rem;
+        }
+        
+        table th, table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        table th {
+            background-color: #f8f9fa;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        footer {
+            background: #212529;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .privacy-container {
+                padding: 2rem;
+            }
+            
+            .privacy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-section {
+                padding: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">OKI<span>AI</span></a>
+            <a href="index.html" class="back-to-site">Back to Homepage</a>
+        </div>
+    </header>
+
+    <main class="privacy-section">
+        <div class="container">
+            <div class="privacy-container">
+                <div class="privacy-header">
+                    <h1>Privacy Policy</h1>
+                    <span class="last-updated">Last Updated: May 14, 2025</span>
+                </div>
+                
+                <div class="privacy-content">
+                    <section>
+                        <h2>1. Introduction</h2>
+                        <p>At OKI AI, we respect your privacy and are committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our decentralized AI governance platform and related services (collectively, the "Services").</p>
+                        <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access our Services. By accessing and using our Services, you consent to the collection, use, disclosure, and storage of your information as described in this Privacy Policy.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. Information We Collect</h2>
+                        <p>We collect several types of information from and about users of our Services, including:</p>
+                        
+                        <h3>2.1 Personal Data</h3>
+                        <p>Personal Data refers to information that can be used to identify you individually. We may collect the following types of Personal Data:</p>
+                        <ul>
+                            <li><strong>Contact Information:</strong> Name, email address, postal address, phone number</li>
+                            <li><strong>Account Information:</strong> Username, password, account preferences</li>
+                            <li><strong>Financial Information:</strong> Wallet addresses, transaction history within our platform</li>
+                            <li><strong>Profile Information:</strong> Profile picture, biography, social media handles, and other information you choose to provide</li>
+                            <li><strong>Communication Data:</strong> Records of your communications with us, including support requests and feedback</li>
+                        </ul>
+                        
+                        <h3>2.2 Non-Personal Data</h3>
+                        <p>We also collect information that does not directly identify you but relates to your use of our Services:</p>
+                        <ul>
+                            <li><strong>Technical Data:</strong> IP address, browser type and version, time zone setting, browser plug-in types and versions, operating system and platform, device information</li>
+                            <li><strong>Usage Data:</strong> Information about how you use our Services, including pages visited, time spent, click-through patterns, features used</li>
+                            <li><strong>Blockchain Data:</strong> Public blockchain addresses and transaction data visible on public blockchains</li>
+                            <li><strong>Aggregated Data:</strong> Statistical or demographic data that does not directly reveal your identity</li>
+                        </ul>
+                        
+                        <div class="highlighted-box">
+                            <p><strong>Note on Blockchain Data:</strong> Due to the nature of blockchain technology, transactions on public blockchains are immutable and transparent. While we do not directly link blockchain addresses to your identity within our Services, third parties may be able to connect your blockchain activity to your identity.</p>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h2>3. How We Collect Information</h2>
+                        <p>We collect information through various methods, including:</p>
+                        <ul>
+                            <li><strong>Direct Interactions:</strong> Information you provide when creating an account, filling out forms, participating in surveys, or communicating with us</li>
+                            <li><strong>Automated Technologies:</strong> Cookies, web beacons, server logs, and other similar technologies that automatically collect information when you use our Services</li>
+                            <li><strong>Third-Party Sources:</strong> We may receive information about you from third-party service providers, business partners, or publicly available sources</li>
+                            <li><strong>Blockchain Interactions:</strong> Information recorded on public blockchains when you interact with our decentralized applications or smart contracts</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>4. How We Use Your Information</h2>
+                        <p>We use the information we collect for various purposes, including:</p>
+                        
+                        <div class="table-container">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Purpose</th>
+                                        <th>Types of Data Used</th>
+                                        <th>Legal Basis</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>To provide and maintain our Services</td>
+                                        <td>Personal Data, Technical Data, Usage Data</td>
+                                        <td>Performance of a contract, Legitimate interests</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To process transactions and send transaction-related communications</td>
+                                        <td>Personal Data, Financial Information</td>
+                                        <td>Performance of a contract</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To manage your account and relationship with us</td>
+                                        <td>Personal Data, Communication Data</td>
+                                        <td>Performance of a contract, Legitimate interests</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To improve and optimize our Services</td>
+                                        <td>Technical Data, Usage Data</td>
+                                        <td>Legitimate interests</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To detect, prevent, and address technical issues or fraudulent activities</td>
+                                        <td>Technical Data, Usage Data, Financial Information</td>
+                                        <td>Legitimate interests, Legal obligation</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To personalize your experience and provide content tailored to your interests</td>
+                                        <td>Usage Data, Profile Information</td>
+                                        <td>Legitimate interests, Consent</td>
+                                    </tr>
+                                    <tr>
+                                        <td>To communicate with you about updates, changes, or new features</td>
+                                        <td>Personal Data</td>
+                                        <td>Legitimate interests, Consent</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                    
+                    <section>
+                        <h2>5. Cookies and Similar Technologies</h2>
+                        <p>We use cookies and similar tracking technologies to track activity on our Services and to hold certain information. Cookies are files with a small amount of data that may include an anonymous unique identifier.</p>
+                        <p>We use the following types of cookies:</p>
+                        <ul>
+                            <li><strong>Essential Cookies:</strong> Necessary for the functioning of our Services</li>
+                            <li><strong>Preference Cookies:</strong> Remember your preferences and settings</li>
+                            <li><strong>Analytics Cookies:</strong> Help us understand how users interact with our Services</li>
+                            <li><strong>Marketing Cookies:</strong> Used to deliver relevant advertisements and track marketing campaign performance</li>
+                        </ul>
+                        <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Services.</p>
+                        <p>For more detailed information about the cookies we use, please see our <a href="cookie-policy.html">Cookie Policy</a>.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. Data Sharing and Disclosure</h2>
+                        <p>We may share your information with the following categories of recipients:</p>
+                        <ul>
+                            <li><strong>Service Providers:</strong> Third-party vendors and service providers who perform services on our behalf, such as hosting providers, analytics providers, and payment processors</li>
+                            <li><strong>Business Partners:</strong> Partners with whom we jointly offer products or services</li>
+                            <li><strong>Affiliates:</strong> Our subsidiaries and affiliated companies</li>
+                            <li><strong>Legal Requirements:</strong> When required by law or to respond to legal process, to protect our rights, or to protect the safety of our users or others</li>
+                            <li><strong>Business Transfers:</strong> In connection with a merger, acquisition, financing, or sale of assets</li>
+                            <li><strong>With Your Consent:</strong> We may share your information with other third parties when you have consented to such sharing</li>
+                        </ul>
+                        <p>We do not sell your personal information to third parties.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>7. Data Security</h2>
+                        <p>We implement appropriate technical and organizational measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. These measures include:</p>
+                        <ul>
+                            <li>Encryption of sensitive data</li>
+                            <li>Regular security assessments and penetration testing</li>
+                            <li>Access controls and authentication procedures</li>
+                            <li>Secure development practices</li>
+                            <li>Regular backup procedures</li>
+                        </ul>
+                        <p>However, please be aware that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. Data Retention</h2>
+                        <p>We retain your personal information for as long as necessary to fulfill the purposes described in this Privacy Policy, unless a longer retention period is required or permitted by law. The criteria used to determine our retention periods include:</p>
+                        <ul>
+                            <li>The duration of our relationship with you</li>
+                            <li>Our legal obligations</li>
+                            <li>Applicable statutes of limitations</li>
+                            <li>Ongoing or potential disputes</li>
+                            <li>Business and operational needs</li>
+                        </ul>
+                        <p>When personal information is no longer needed, we will securely delete or anonymize it.</p>
+                        <p>Please note that due to the nature of blockchain technology, transaction data recorded on public blockchains cannot be deleted or modified.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>9. Your Privacy Rights</h2>
+                        <p>Depending on your location, you may have certain rights regarding your personal information. These may include:</p>
+                        <ul>
+                            <li><strong>Right to Access:</strong> You may request information about the personal data we hold about you.</li>
+                            <li><strong>Right to Rectification:</strong> You may request correction of your personal data if it is inaccurate or incomplete.</li>
+                            <li><strong>Right to Erasure:</strong> You may request deletion of your personal data in certain circumstances.</li>
+                            <li><strong>Right to Restrict Processing:</strong> You may request restriction of processing of your personal data in certain circumstances.</li>
+                            <li><strong>Right to Data Portability:</strong> You may request a copy of your personal data in a structured, commonly used, and machine-readable format.</li>
+                            <li><strong>Right to Object:</strong> You may object to our processing of your personal data in certain circumstances.</li>
+                            <li><strong>Right to Withdraw Consent:</strong> You may withdraw consent where we rely on consent to process your personal data.</li>
+                        </ul>
+                        <p>To exercise these rights, please contact us using the information provided in the "Contact Us" section below.</p>
+                        <p><strong>Note:</strong> Due to the nature of blockchain technology, we may not be able to modify or delete certain information that is stored on a public blockchain.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>10. Children's Privacy</h2>
+                        <p>Our Services are not intended for children under the age of 18, and we do not knowingly collect personal information from children under 18. If we learn that we have collected personal information from a child under 18 without verification of parental consent, we will take steps to delete that information as soon as possible.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>11. International Data Transfers</h2>
+                        <p>We operate globally and may transfer your personal information to countries other than your country of residence. These countries may have different data protection laws than your country. When we transfer personal data internationally, we take steps to ensure that appropriate safeguards are in place to protect your information and comply with applicable data protection laws.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>12. Third-Party Links and Services</h2>
+                        <p>Our Services may contain links to third-party websites, services, or content that are not owned or controlled by OKI AI. We are not responsible for the privacy practices or the content of such third-party services. We encourage you to review the privacy policies of any third-party services you access through our Services.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>13. Changes to this Privacy Policy</h2>
+                        <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top of this Privacy Policy.</p>
+                        <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
+                    </section>
+                    
+                    <div class="contact-section">
+                        <h2>14. Contact Us</h2>
+                        <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us at:</p>
+                        <p><a href="mailto:contact@aidao.finance">contact@aidao.finance</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 OKI AI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
