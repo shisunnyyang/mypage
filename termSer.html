@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OKI AI - Terms of Service</title>
+    <style>
+        :root {
+            --primary: #3a86ff;
+            --secondary: #8338ec;
+            --accent: #ff006e;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: var(--dark);
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: white;
+        }
+        
+        .logo span {
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-left: 5px;
+        }
+        
+        .back-to-site {
+            display: inline-block;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        
+        .back-to-site:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .terms-section {
+            padding: 8rem 0 4rem;
+        }
+        
+        .terms-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.05);
+            padding: 3rem;
+        }
+        
+        .terms-header {
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .terms-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .terms-header h1::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 10px;
+        }
+        
+        .last-updated {
+            display: block;
+            color: #6c757d;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+            font-style: italic;
+        }
+        
+        .terms-content section {
+            margin-bottom: 2.5rem;
+        }
+        
+        .terms-content h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark);
+            position: relative;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #e9ecef;
+        }
+        
+        .terms-content p {
+            margin-bottom: 1.2rem;
+            color: #495057;
+            font-size: 1rem;
+        }
+        
+        .terms-content ul, .terms-content ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+        
+        .terms-content li {
+            margin-bottom: 0.8rem;
+            color: #495057;
+        }
+        
+        .terms-content strong {
+            color: var(--dark);
+            font-weight: 600;
+        }
+        
+        .highlighted-box {
+            background: #f8f9fa;
+            border-left: 4px solid var(--primary);
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .highlighted-box p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 3rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            border-bottom: none;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-section a {
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .contact-section a:hover {
+            color: var(--secondary);
+        }
+        
+        footer {
+            background: #212529;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 4rem;
+            text-align: center;
+        }
+        
+        .footer-content p {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+        
+        @media (max-width: 768px) {
+            .terms-container {
+                padding: 2rem;
+            }
+            
+            .terms-header h1 {
+                font-size: 2rem;
+            }
+            
+            .contact-section {
+                padding: 1.5rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <a href="index.html" class="logo">OKI<span>AI</span></a>
+            <a href="index.html" class="back-to-site">Back to Homepage</a>
+        </div>
+    </header>
+
+    <main class="terms-section">
+        <div class="container">
+            <div class="terms-container">
+                <div class="terms-header">
+                    <h1>Terms of Service</h1>
+                    <span class="last-updated">Last Updated: May 14, 2025</span>
+                </div>
+                
+                <div class="terms-content">
+                    <section>
+                        <h2>1. Introduction</h2>
+                        <p>Welcome to OKI AI. These Terms of Service ("Terms") govern your access to and use of the OKI AI platform, website, and services (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms and our Privacy Policy. If you do not agree to these Terms, you may not access or use the Services.</p>
+                        <p>Please read these Terms carefully before using our Services. If you have any questions about these Terms, please contact us at <a href="mailto:contact@aidao.finance">contact@aidao.finance</a>.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>2. Services Description</h2>
+                        <p>OKI AI provides a decentralized AI governance platform that enables:</p>
+                        <ul>
+                            <li>Automation of business processes for AI value co-creation as collective efforts</li>
+                            <li>Integration of tokenomics with AI systems and operations</li>
+                            <li>A platform for experimenting with AI Fi (AI-powered financial instruments and mechanisms)</li>
+                            <li>Integration of Web2 and Cloud resources for Web3 AI applications</li>
+                        </ul>
+                        <p>The Services may evolve over time. We reserve the right to modify, suspend, or discontinue any part of the Services without prior notice.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>3. Eligibility and Account Registration</h2>
+                        <p>To access certain features of our Services, you may need to register for an account. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.</p>
+                        <p>By creating an account, you represent that:</p>
+                        <ul>
+                            <li>You are at least 18 years of age or the age of legal majority in your jurisdiction</li>
+                            <li>You have the legal capacity to enter into these Terms</li>
+                            <li>You are not barred from using the Services under applicable law</li>
+                            <li>The information you provide is accurate and complete</li>
+                        </ul>
+                        <p>You are responsible for safeguarding your account credentials and for all activities that occur under your account. You must notify us immediately of any unauthorized use of your account.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>4. User Conduct</h2>
+                        <p>When using our Services, you agree not to:</p>
+                        <ul>
+                            <li>Use the Services for any illegal purpose or in violation of any local, state, national, or international law</li>
+                            <li>Engage in any activity that exploits, harms, or threatens to harm minors</li>
+                            <li>Attempt to gain unauthorized access to the Services, other users' accounts, or systems connected to the Services</li>
+                            <li>Interfere with or disrupt the Services or servers or networks connected to the Services</li>
+                            <li>Post or transmit any content that is unlawful, harmful, threatening, abusive, harassing, defamatory, vulgar, obscene, or otherwise objectionable</li>
+                            <li>Impersonate any person or entity, or falsely state or otherwise misrepresent your affiliation with a person or entity</li>
+                            <li>Engage in any fraudulent, deceptive, or manipulative activities</li>
+                            <li>Use any robot, spider, crawler, scraper, or other automated means to access the Services for any purpose</li>
+                            <li>Introduce any viruses, Trojan horses, worms, logic bombs, or other harmful material</li>
+                            <li>Violate the intellectual property rights of others</li>
+                        </ul>
+                        <p>We reserve the right to terminate your access to the Services for violations of these Terms.</p>
+                    </section>
+                    
+                    <div class="highlighted-box">
+                        <p><strong>Important Note:</strong> The OKI AI platform integrates blockchain and decentralized technologies. Users are responsible for understanding the implications of blockchain transactions, including their immutability, public nature, and applicable regulations in their jurisdictions.</p>
+                    </div>
+                    
+                    <section>
+                        <h2>5. Intellectual Property Rights</h2>
+                        <p>The Services and their entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio) are owned by OKI AI, its licensors, or other providers of such material and are protected by international copyright, trademark, patent, trade secret, and other intellectual property or proprietary rights laws.</p>
+                        <p>Unless otherwise indicated, all trademarks, service marks, and trade names are owned, registered, and/or licensed by OKI AI.</p>
+                        <p>Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, and revocable license to access and use the Services for your personal or internal business purposes.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>6. User Content</h2>
+                        <p>"User Content" means any content that users submit, post, or transmit to, through, or in connection with the Services, including any text, graphics, photos, or other materials.</p>
+                        <p>By submitting User Content to the Services, you grant us a worldwide, non-exclusive, royalty-free, sublicensable, and transferable license to use, reproduce, distribute, prepare derivative works of, display, and perform the User Content in connection with the Services and OKI AI's business operations.</p>
+                        <p>You represent and warrant that:</p>
+                        <ul>
+                            <li>You own or have the necessary licenses, rights, consents, and permissions to use and authorize us to use the User Content as described herein</li>
+                            <li>The User Content does not violate any third party's intellectual property rights, privacy rights, publicity rights, or other personal or proprietary rights</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>7. Third-Party Services and Content</h2>
+                        <p>The Services may contain links to third-party websites, services, or content that are not owned or controlled by OKI AI. We have no control over, and assume no responsibility for, the content, privacy policies, or practices of any third-party websites or services.</p>
+                        <p>You acknowledge and agree that OKI AI shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods, or services available on or through any such websites or services.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>8. Tokenomics and Digital Assets</h2>
+                        <p>The OKI AI platform may include tokenomic elements, digital assets, or cryptocurrency mechanisms. With respect to these elements:</p>
+                        <ul>
+                            <li>Any tokens or digital assets provided through the Services are utility tokens intended for use within the OKI AI ecosystem</li>
+                            <li>The acquisition, storage, transfer, and use of digital assets may be subject to various laws and regulations in different jurisdictions</li>
+                            <li>We make no guarantees regarding the value, utility, or continued availability of any digital assets associated with the Services</li>
+                            <li>You are solely responsible for complying with applicable laws and regulations related to your transactions involving digital assets</li>
+                            <li>Digital asset transactions may be irreversible, and losses due to fraudulent or accidental transactions may not be recoverable</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>9. Disclaimer of Warranties</h2>
+                        <p>THE SERVICES ARE PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED. TO THE FULLEST EXTENT PERMISSIBLE PURSUANT TO APPLICABLE LAW, OKI AI DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING, BUT NOT LIMITED TO, IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, AND TITLE.</p>
+                        <p>WE DO NOT WARRANT THAT:</p>
+                        <ul>
+                            <li>THE SERVICES WILL BE UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE</li>
+                            <li>THE RESULTS THAT MAY BE OBTAINED FROM THE USE OF THE SERVICES WILL BE ACCURATE OR RELIABLE</li>
+                            <li>THE QUALITY OF ANY PRODUCTS, SERVICES, INFORMATION, OR OTHER MATERIAL PURCHASED OR OBTAINED BY YOU THROUGH THE SERVICES WILL MEET YOUR EXPECTATIONS</li>
+                            <li>ANY ERRORS IN THE SERVICES WILL BE CORRECTED</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>10. Limitation of Liability</h2>
+                        <p>IN NO EVENT SHALL OKI AI, ITS DIRECTORS, OFFICERS, EMPLOYEES, AGENTS, PARTNERS, SUPPLIERS, OR AFFILIATES, BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING WITHOUT LIMITATION, LOSS OF PROFITS, DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, RESULTING FROM:</p>
+                        <ul>
+                            <li>YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE SERVICES</li>
+                            <li>ANY CONDUCT OR CONTENT OF ANY THIRD PARTY ON THE SERVICES</li>
+                            <li>ANY CONTENT OBTAINED FROM THE SERVICES</li>
+                            <li>UNAUTHORIZED ACCESS, USE, OR ALTERATION OF YOUR TRANSMISSIONS OR CONTENT</li>
+                        </ul>
+                        <p>WHETHER BASED ON WARRANTY, CONTRACT, TORT (INCLUDING NEGLIGENCE), OR ANY OTHER LEGAL THEORY, WHETHER OR NOT WE HAVE BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+                        <p>IN JURISDICTIONS WHERE THE EXCLUSION OR LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES IS NOT ALLOWED, OUR LIABILITY SHALL BE LIMITED TO THE MAXIMUM EXTENT PERMITTED BY LAW.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>11. Indemnification</h2>
+                        <p>You agree to defend, indemnify, and hold harmless OKI AI, its officers, directors, employees, and agents, from and against any claims, liabilities, damages, losses, and expenses, including, without limitation, reasonable legal and accounting fees, arising out of or in any way connected with:</p>
+                        <ul>
+                            <li>Your access to or use of the Services</li>
+                            <li>Your violation of these Terms</li>
+                            <li>Your violation of any third-party right, including without limitation any intellectual property right, publicity, confidentiality, property, or privacy right</li>
+                            <li>Any claim that your User Content caused damage to a third party</li>
+                        </ul>
+                    </section>
+                    
+                    <section>
+                        <h2>12. Governing Law and Dispute Resolution</h2>
+                        <p>These Terms shall be governed by and construed in accordance with the laws of the State of Texas, without regard to its conflict of law provisions.</p>
+                        <p>Any dispute arising from or relating to the subject matter of these Terms shall be finally settled by arbitration in Houston, Texas, using the English language in accordance with the American Arbitration Association (AAA) rules then in effect, by one or more commercial arbitrators with substantial experience in resolving intellectual property and commercial contract disputes.</p>
+                        <p>The prevailing party in any arbitration or legal proceeding related to these Terms shall be entitled to recover its costs and reasonable attorneys' fees.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>13. Changes to Terms</h2>
+                        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                        <p>By continuing to access or use our Services after any revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, you are no longer authorized to use the Services.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>14. Severability</h2>
+                        <p>If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect.</p>
+                    </section>
+                    
+                    <section>
+                        <h2>15. Entire Agreement</h2>
+                        <p>These Terms constitute the entire agreement between you and OKI AI regarding our Services, and supersede and replace any prior agreements we might have had between us regarding the Services.</p>
+                    </section>
+                    
+                    <div class="contact-section">
+                        <h2>Questions or Concerns?</h2>
+                        <p>If you have any questions about these Terms of Service, please contact us at:</p>
+                        <p><a href="mailto:contact@aidao.finance">contact@aidao.finance</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 OKI AI. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                    <a href="cookie-policy.html">Cookie Policy</a>
+                    <a href="disclaimer.html">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
